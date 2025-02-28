@@ -6,33 +6,42 @@ body {
     margin: 0; 
 }
 
-.red {
-    background-color: red;
+.black {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.fit {
+    width: 100%;
 }
 
 .group:hover .pillar {
-    transform: scale(0.95); /* Shrinks non-hovered pillars */
+    transform: scale(0.95);
     filter: brightness(75%);
 }
 
 .group:hover .pillar:hover {
-    transform: scale(1.05); /* Enlarges hovered pillar */
+    transform: scale(1.05); 
     filter: brightness(105%);
 }
 
-/* Smooth transition */
 .pillar {
     transition: all 0.4s ease-in-out;
-    filter: brightness(90%); /* Default slightly dark */
+    filter: brightness(90%); 
     min-height: 60vh;
 }
 
+.pillar img {
+    width: 20rem;
+    height: 100%;
+    object-fit: cover;
+}
+
 .kitty {
-    background-image: url('assets/img/Cocktail Kitten.jpg');
-    background-size: cover;
+    background-image: url('assets/img/self.png');
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 150%;
+    width: 100%;
 }
 
 .kitty p {
